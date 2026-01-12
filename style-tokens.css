@@ -1,0 +1,210 @@
+﻿/* ===================================
+   TWITCH OVERLAY - DESIGN TOKENS
+   =================================== */
+
+:root {
+    /* === Brand Colors === */
+    --color-primary: #667eea;
+    --color-primary-dark: #5568d3;
+    --color-primary-light: #8e9ef7;
+
+    --color-secondary: #764ba2;
+    --color-secondary-dark: #5d3a7f;
+    --color-secondary-light: #9561c7;
+
+    --color-accent: #f093fb;
+    --color-accent-alt: #4facfe;
+
+    /* === Twitch Brand === */
+    --color-twitch: #9146ff;
+    --color-twitch-dark: #772ce8;
+
+    /* === Status Colors === */
+    --color-success: #43e97b;
+    --color-warning: #feca57;
+    --color-error: #ff6b6b;
+    --color-info: #4facfe;
+
+    /* === Neutral Colors === */
+    --color-white: #ffffff;
+    --color-black: #000000;
+    --color-gray-100: #f8f9fa;
+    --color-gray-200: #e9ecef;
+    --color-gray-300: #dee2e6;
+    --color-gray-400: #ced4da;
+    --color-gray-500: #adb5bd;
+    --color-gray-600: #6c757d;
+    --color-gray-700: #495057;
+    --color-gray-800: #343a40;
+    --color-gray-900: #212529;
+
+    /* === Gradients === */
+    --gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    --gradient-accent: linear-gradient(135deg, #f093fb 0%, #4facfe 100%);
+    --gradient-success: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+    --gradient-danger: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+    --gradient-dark: linear-gradient(135deg, #232526 0%, #414345 100%);
+
+    /* === Spacing === */
+    --space-xs: 0.25rem;    /* 4px */
+    --space-sm: 0.5rem;     /* 8px */
+    --space-md: 1rem;       /* 16px */
+    --space-lg: 1.5rem;     /* 24px */
+    --space-xl: 2rem;       /* 32px */
+    --space-2xl: 3rem;      /* 48px */
+    --space-3xl: 4rem;      /* 64px */
+    --space-4xl: 6rem;      /* 96px */
+
+    /* === Border Radius === */
+    --radius-sm: 5px;
+    --radius-md: 10px;
+    --radius-lg: 15px;
+    --radius-xl: 20px;
+    --radius-2xl: 30px;
+    --radius-full: 9999px;
+
+    /* === Shadows === */
+    --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
+    --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.15);
+    --shadow-lg: 0 10px 20px rgba(0, 0, 0, 0.2);
+    --shadow-xl: 0 20px 40px rgba(0, 0, 0, 0.3);
+    --shadow-2xl: 0 30px 60px rgba(0, 0, 0, 0.4);
+    --shadow-glow: 0 0 20px rgba(102, 126, 234, 0.5);
+    --shadow-glow-strong: 0 0 40px rgba(102, 126, 234, 0.8);
+
+    /* === Typography === */
+    --font-family-base: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --font-family-heading: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
+    --font-family-mono: 'Fira Code', 'Consolas', monospace;
+
+    /* Font Sizes */
+    --font-size-xs: 0.75rem;    /* 12px */
+    --font-size-sm: 0.875rem;   /* 14px */
+    --font-size-base: 1rem;     /* 16px */
+    --font-size-lg: 1.125rem;   /* 18px */
+    --font-size-xl: 1.25rem;    /* 20px */
+    --font-size-2xl: 1.5rem;    /* 24px */
+    --font-size-3xl: 2rem;      /* 32px */
+    --font-size-4xl: 2.5rem;    /* 40px */
+    --font-size-5xl: 3rem;      /* 48px */
+    --font-size-6xl: 3.5rem;    /* 56px */
+    --font-size-7xl: 4rem;      /* 64px */
+
+    /* Font Weights */
+    --font-weight-light: 300;
+    --font-weight-normal: 400;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+    --font-weight-extrabold: 800;
+    --font-weight-black: 900;
+
+    /* Line Heights */
+    --line-height-tight: 1.25;
+    --line-height-normal: 1.5;
+    --line-height-relaxed: 1.75;
+
+    /* === Z-Index === */
+    --z-index-base: 1;
+    --z-index-overlay: 10;
+    --z-index-alert: 100;
+    --z-index-modal: 1000;
+    --z-index-toast: 10000;
+
+    /* === Transitions === */
+    --transition-fast: 150ms ease-in-out;
+    --transition-base: 300ms ease-in-out;
+    --transition-slow: 500ms ease-in-out;
+
+    /* === Overlay Specific === */
+    --overlay-width: 1920px;
+    --overlay-height: 1080px;
+
+    /* Glass Effect */
+    --glass-bg: rgba(0, 0, 0, 0.6);
+    --glass-bg-light: rgba(255, 255, 255, 0.1);
+    --glass-blur: blur(10px);
+    --glass-border: rgba(255, 255, 255, 0.2);
+}
+
+/* ===================================
+   UTILITY ANIMATIONS
+   =================================== */
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.6; }
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+/* Animation Classes */
+.animate-fade-in {
+    animation: fadeIn 0.6s ease-out;
+}
+
+.animate-slide-in-up {
+    animation: slideInUp 0.6s ease-out;
+}
+
+.animate-slide-in-down {
+    animation: slideInDown 0.6s ease-out;
+}
+
+.animate-scale-in {
+    animation: scaleIn 0.6s ease-out;
+}
+
+.animate-pulse {
+    animation: pulse 2s ease-in-out infinite;
+}
+
+.animate-bounce {
+    animation: bounce 1s ease-in-out infinite;
+}
