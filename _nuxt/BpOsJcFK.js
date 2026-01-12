@@ -1,0 +1,1 @@
+import{Q as s}from"./D5vI1Phe.js";const p=s("/Logo Base PSD V2 2Kx2K.png");export{p as _};
