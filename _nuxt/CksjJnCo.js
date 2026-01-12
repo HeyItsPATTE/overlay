@@ -1,0 +1,1 @@
+import{g as s,r as t,c,a as e,t as o,k as r,o as n,_}from"./BLgCwnIE.js";const i={class:"webcam-overlay"},m={class:"webcam-container"},d={class:"webcam-bar"},l=s({__name:"webcam",setup(p){const a=t("BerryBit Studios");return(f,u)=>(n(),c("div",i,[e("div",m,[e("div",d,[e("span",null,o(r(a)),1)])])]))}}),v=_(l,[["__scopeId","data-v-37347cc6"]]);export{v as default};
